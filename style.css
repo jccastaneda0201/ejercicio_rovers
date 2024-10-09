@@ -1,6 +1,9 @@
-@import url("reset.css");
+/* Import Section */
+
 @import url("https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css");
+
+/* End Import Section  */
 
 /* Fuentes y Colores a utilizar
 
@@ -10,24 +13,35 @@ color_principal: #fa573a
 color_azul: #21242e
 */
 
+/* Variables Root */
+
+:root {
+  --fuente-principal: "Montserrat", sans-serif;
+  --fuente-titulos: "Handlee", cursive;
+  --colorprimario: #fa573a;
+  --colorsecundario: #21242e;
+  --fontsize: 1em;
+  --margingrid: 1em;
+  --maxwidth: 68.75em;
+}
+
 /* Scroll Animado */
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Variables Root */
-:root {
-  --fuente-principal: "Montserrat", sans-serif;
-  --fuente-titulos: "Handlee", cursive;
-  --color-principal: #fa573a;
-  --colorsecundario: #21242e;
-  --fontsize: 1em;
-  --margingrid: 1em;
-  --anchomaximo: 68.75em;
+/* Estilos Globales */
+
+body {
+  font-family: var(--fuente-principal) !important;
+  font-size: var(--fontsize) !important;
 }
 
-/* Estilos Globales */
+.container {
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+}
 
 img {
   height: auto;
@@ -35,12 +49,77 @@ img {
   width: 100%;
 }
 
-body {
-  font-family: var(--fuente-principal);
-  font-size: var(--fontsize);
+/* Star Header */
+
+header .nav__bar {
+  background-color: var(--colorsecundario);
+  padding: 1.25em 0em;
 }
 
-.container {
-  max-width: var(--anchomaximo);
-  margin: 0 auto;
+header .nav__bar .container {
+  display: flex;
+  justify-content: space-around;
 }
+
+header .nav__bar a {
+  color: var(--colorprimario);
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+header .nav__bar a span {
+  color: white;
+  display: none;
+}
+
+header nav {
+  background-color: white;
+  padding: 1.25em;
+}
+
+header nav .container {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+header nav .container .logo {
+  max-width: 6.25em;
+}
+
+header nav .container .hamburguesa {
+  width: 1.875em;
+  cursor: pointer;
+}
+
+header nav .container .hamburguesa > div {
+  border-top: 2px solid #aaa;
+  margin-bottom: 0.625em;
+}
+
+header nav .container ul.menu {
+  width: 100%;
+  text-align: center;
+}
+
+header nav .container .menu li a {
+  display: block;
+  padding: 1.25em;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #aaaaaa;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+header nav .container .menu li:last-child a {
+  border: 0px;
+}
+
+header nav .container .menu li :is(a:hover, .activo) {
+  color: var(--colorprimario);
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+
+/* End Header */
