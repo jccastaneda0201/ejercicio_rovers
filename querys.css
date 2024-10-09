@@ -1,0 +1,40 @@
+/* Media Queries */
+
+/* MOVILES */
+
+@media (min-width: 600px) {
+}
+
+/* TABLETS */
+
+@media (min-width: 768px) {
+  /* Star Header */
+  header .nav__bar a span {
+    display: inline;
+  }
+  /* End Header */
+}
+
+/* DESKTOPS */
+
+@media (min-width: 1004px) {
+  /* Star Header */
+  header nav .container .hamburguesa {
+    display: none;
+  }
+
+  header nav .container ul.menu {
+    text-align: left;
+    width: auto;
+  }
+
+  header nav .container .menu li a {
+    padding: 0em 1.25em;
+    border-bottom: 0px;
+  }
+
+  header nav .container ul.menu li {
+    display: inline-block;
+  }
+  /* End Header */
+}
