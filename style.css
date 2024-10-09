@@ -21,7 +21,7 @@ color_azul: #21242e
   --colorprimario: #fa573a;
   --colorsecundario: #21242e;
   --fontsize: 1em;
-  --margingrid: 1em;
+  --margin: 1em;
   --maxwidth: 68.75em;
 }
 
@@ -123,6 +123,85 @@ header nav .container .menu li :is(a:hover, .activo) {
 }
 
 /* End Header */
+
+/* Star hero */
+
+.hero__container {
+  background-color: #999;
+  background-image: url(./img/fondo.jpg);
+  height: 60vh;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: multiply;
+  color: white;
+  display: flex;
+
+  h1 {
+    font-family: var(--fuente-titulos);
+    font-size: 2em;
+  }
+  h2 {
+    color: var(--colorprimario);
+    font-size: 1.25em;
+  }
+
+  p {
+    font-size: 1.15em;
+  }
+
+  ul {
+    display: flex;
+    width: 10em;
+    justify-content: space-between;
+
+    a {
+      color: white;
+      font-size: 2em;
+      text-decoration: none;
+      transition: 1s;
+
+      &:hover {
+        color: var(--colorprimario);
+        font-size: 3em;
+      }
+    }
+  }
+}
+
+.hero__container .container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+}
+
+.boton {
+  display: inline-block;
+  background-color: var(--colorprimario);
+  padding: 1.15em;
+  color: white;
+  text-decoration: none;
+  border: 1px solid var(--colorprimario);
+
+  &:hover {
+    background-color: transparent;
+    color: var(--colorprimario);
+  }
+
+  i {
+    transition: 1s;
+
+    &:hover {
+      transform: translateX(5px) scale(1.2);
+    }
+  }
+}
+
+:is(h2, .boton) {
+  margin: var(--margin) 0;
+}
+
+/* End Hero */
 
 /* Star Footer */
 footer {
