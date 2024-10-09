@@ -123,3 +123,36 @@ header nav .container .menu li :is(a:hover, .activo) {
 }
 
 /* End Header */
+
+/* Star Footer */
+footer {
+  position: fixed;
+  background-color: var(--colorsecundario);
+  padding: 1rem 0 !important;
+  text-align: center;
+  color: white;
+  width: 100%;
+  bottom: 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+footer a:hover {
+  color: var(--color-principal);
+}
+
+/* End Footer */
+
+/* Arrow Up */
+.arrow__up a {
+  display: block;
+  position: fixed;
+  bottom: 1.3em;
+  right: 1.3em;
+  color: var(--colorprimario);
+  font-size: 3rem;
+}
+/* End Arrow */

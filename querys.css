@@ -13,6 +13,14 @@
     display: inline;
   }
   /* End Header */
+
+  /* Star Footer */
+  footer {
+    padding: 1em !important;
+    text-align: left;
+  }
+
+  /* End Footer */
 }
 
 /* DESKTOPS */
