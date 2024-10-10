@@ -3,6 +3,36 @@
 /* MOVILES */
 
 @media (min-width: 600px) {
+  main .service__boxes article:last-child {
+    width: 100%;
+  }
+
+  main .service__boxes {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    article {
+      border: 0px;
+      height: auto;
+      width: 40%;
+      border-left: 2px solid #aaa;
+      margin: var(--marginservice__boxes);
+      /* height: auto; */
+      padding: 0 1em;
+    }
+  }
+
+  main section .flex {
+    margin-top: 2.5em;
+    flex-direction: row;
+
+    figure.imagen {
+      margin: 0 2.5em;
+      width: 130%;
+    }
+  }
 }
 
 /* TABLETS */
@@ -14,12 +44,41 @@
   }
   /* End Header */
 
+  /* Star Main  */
+
+  main .service__boxes article:last-child {
+    width: 100%;
+  }
+
+  main .service__boxes {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    article {
+      border: 0px;
+      height: auto;
+      width: 40%;
+      border-left: 2px solid #aaa;
+      margin: var(--marginservice__boxes);
+      /* height: auto; */
+      padding: 0 1em;
+    }
+  }
+
+  main section .flex figure.imagen .marco {
+    margin: 0 2em;
+    width: auto;
+  }
+
+  /* End Main */
+
   /* Star Footer */
   footer {
     padding: 1em !important;
     text-align: left;
   }
-
   /* End Footer */
 }
 
@@ -45,4 +104,27 @@
     display: inline-block;
   }
   /* End Header */
+
+  /* Star Main  */
+
+  main .service__boxes {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  main .service__boxes article {
+    border: 0px;
+    width: 33.333%;
+    border-left: 2px solid #aaa;
+    margin: var(--marginservice__boxes);
+    padding: 0 1em;
+  }
+
+  main .service__boxes article:last-child {
+    width: 33.333%;
+  }
+  /* End Main */
 }
