@@ -10,7 +10,7 @@
 font-family: 'Handlee', cursive;
 font-family: 'Montserrat' sans-serif; 
 color_principal: #fa573a
-color_azul: #21242e
+color_secundario: #21242e
 */
 
 /* Variables Root */
@@ -20,9 +20,9 @@ color_azul: #21242e
   --fuente-titulos: "Handlee", cursive;
   --colorprimario: #fa573a;
   --colorsecundario: #21242e;
-  --fontsize: 1em;
   --margin: 1em;
   --maxwidth: 68.75em;
+  --fontsize: 1em;
 }
 
 /* Scroll Animado */
@@ -203,6 +203,131 @@ header nav .container .menu li :is(a:hover, .activo) {
 
 /* End Hero */
 
+/* Star Main */
+/* -> Services Container */
+
+main section {
+  padding: 2.125em 1.5em;
+
+  h2 {
+    color: black;
+    font-family: var(--fuente-titulos);
+    font-size: 2em;
+    text-align: center;
+
+    span {
+      color: var(--colorprimario);
+    }
+  }
+
+  .drawline {
+    position: relative;
+    font-weight: 700;
+    text-align: center;
+    width: 6.25em;
+    margin: 0 auto;
+    color: var(--colorprimario);
+
+    span {
+      position: absolute;
+      top: -0.4em;
+    }
+
+    hr {
+      color: var(--colorprimario);
+    }
+  }
+}
+
+main .service__boxes {
+  article {
+    border: 0px;
+    border-bottom: 2px solid #aaa;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 1em;
+    margin: 0.3em 0;
+  }
+
+  p {
+    color: var(--colorsecundario);
+    font-size: 0.95em;
+    line-height: 1.25em;
+    margin: 0.5em 0em;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    color: var(--colorprimario);
+    text-decoration: none;
+    margin: 0.8em 0;
+    font-weight: 700;
+  }
+
+  i.fa-truck {
+    transform: rotateY(180deg);
+  }
+  i:is(.fa-cogs, .fa-truck, .fa-heart) {
+    color: var(--colorprimario);
+    border: 1px solid var(--colorprimario);
+    font-size: 1.25em;
+    padding: 0.5em;
+    margin: 0.5em 0;
+  }
+}
+
+/* -> End Services container */
+
+/* -> Star About Container */
+
+main .about__container {
+  margin-bottom: 4.375em;
+}
+
+main section .flex {
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-weight: 700;
+    font-size: 1.1em;
+  }
+
+  h4 {
+    font-size: 1em;
+    margin: var(--margin) 0;
+    color: var(--colorprimario);
+  }
+
+  figure.imagen {
+    width: 95%;
+    margin: 2.5em auto;
+
+    .marco {
+      border: 3px solid var(--colorprimario);
+      transition: 1s;
+      transform: rotateZ(10deg);
+
+      &:hover {
+        :is(.marco, .marco img) {
+          transform: rotateZ(0deg);
+        }
+      }
+
+      img {
+        transform: rotateZ(-10deg);
+        transition: 1s;
+      }
+    }
+  }
+}
+
+/* -> End About Container */
+/* End Main */
+
 /* Star Footer */
 footer {
   position: fixed;
@@ -220,7 +345,7 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--color-principal);
+  color: var(--colorprimario);
 }
 
 /* End Footer */
